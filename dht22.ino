@@ -82,7 +82,8 @@ void post_data(String data) {
  
  http.begin(URL);
  http.addHeader("Content-Type", "application/json");
- 
+ http.addHeader("X-Thing-Key", TOKEN);
+
  int httpCode = http.POST(data);
  String payload = http.getString();
 
